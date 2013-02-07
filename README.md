@@ -18,8 +18,8 @@ Project that explores different methods of integral numeric calculations.
   10. Add more rules if you consider that are something important missing
 
 ## Collaborators
-[Daniel Sandoval](https://www.facebook.com/sandoval1992)
-[Matheus Pedreira](http://www.facebook.com/fraps.m)
-[Vitor de Araujo](http://www.facebook.com/vitor.wx3)
-[Mateus Alves](http://www.facebook.com/mateus.alves.39)
-[Tiago Pigatto](http://www.facebook.com/tiago.pigatto.3)
+  1. [Daniel Sandoval](https://www.facebook.com/sandoval1992)
+  2. [Matheus Pedreira](http://www.facebook.com/fraps.m)
+  3. [Vitor de Araujo](http://www.facebook.com/vitor.wx3)
+  4. [Mateus Alves](http://www.facebook.com/mateus.alves.39)
+  5. [Tiago Pigatto](http://www.facebook.com/tiago.pigatto.3)
