@@ -18,7 +18,7 @@ Project that explores different methods of integral numeric calculations.
   10. Add more rules if you consider that are something important missing
 
 ## Collaborators
-[Daniel Sandoval](https://www.facebook.com/sandoval1992)      
+[Daniel Sandoval](https://www.facebook.com/sandoval1992)
 [Matheus Pedreira](http://www.facebook.com/fraps.m)
 [Vitor de Araujo](http://www.facebook.com/vitor.wx3)
 [Mateus Alves](http://www.facebook.com/mateus.alves.39)
