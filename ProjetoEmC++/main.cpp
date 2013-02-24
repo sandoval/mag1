@@ -6,14 +6,17 @@
  */
 
 #include <cstdlib>
-
+#include "Interface.h"
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-
+    Start start = new Start();
+    start.start();
+    //destruilo
+    
     return 0;
 }
 
