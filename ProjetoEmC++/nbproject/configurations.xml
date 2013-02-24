@@ -4,10 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>Integral.h</itemPath>
+      <itemPath>Interface.h</itemPath>
+      <itemPath>TiposBasicos.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
+      <itemPath>Integral.cpp</itemPath>
+      <itemPath>Interface.cpp</itemPath>
+      <itemPath>TiposBasicos.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
