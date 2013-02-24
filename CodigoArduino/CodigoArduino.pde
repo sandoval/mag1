@@ -1,30 +1,48 @@
 
 // include the library code:
-#include <LiquidCrystal.h>
-#include "Integrate.h"
-// initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+#include "Integral.h"
+double leSerial();
+void escreveSerial();
+void integraEuler();
+void integraverllet();
+void integrakutta();
 
 void setup() {
-
-  // set up the LCD's number of columns and rows: 
-  lcd.begin(16, 2);
-  // Print a message to the LCD.
 }
 
-int i = 0;
-int j = 0;
-void loop() {
-  i++;
-  lcd.setCursor(0,0);
-  lcd.print(j);
-  lcd.print(":");
-  lcd.print(i);
-  delay(1000);
-  if(i == 60)
+void loop()
+{
+  double opc = leSerial
+    if(opc == 1)
   {
-    j++;
-    i = 0;
+    integraeuler();
+  }
+  if(opc == 2)
+  {
+    integraverllet();
+  }
+  if(opc == 1)
+  {
+    integrakutta();
   }
 }
+
+void integraEuller()
+{
+  double intervalo = leSerial();
+  double a = leSerial();
+  double b = leSerial();
+  double tempo = 0;
+
+  //inicia contagem
+  IntegralEuler integra = new IntegralEuler(intervalo);
+  double result = integrate(a, b);
+
+  //finaliza contagem
+
+  //
+  escreveSerial(result);
+  escreveSerial(tempo);
+}
+
 
