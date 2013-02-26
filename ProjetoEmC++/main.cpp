@@ -13,7 +13,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    Start start = new Start();
+    Start start;
     start.start();
     //destruilo
     

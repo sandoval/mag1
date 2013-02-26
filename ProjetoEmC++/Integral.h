@@ -10,41 +10,51 @@
 
 #include "TiposBasicos.h"
 
-class Integral
-{
+class Integral {
 public:
     double funcao(double x);
     virtual double integrate(double a, double b) = 0;
 };
 
-inline double Integral::funcao(double x)
-{
-    return x^2;
+inline double Integral::funcao(double x) {
+    static int i = 0;
+    return x+pow(x, 3)+2*x -5;
+    i++;
 };
 
-class IntegralEuler : public Integral
-{
+class IntegralEuler : public Integral {
     double intervalo;
 public:
     IntegralEuler(double);
     double integrate(double a, double b);
+}; //ok
+
+class IntegralBarra : public Integral {
+    double intervalo;
+public:
+    IntegralBarra(double);
+    double integrate(double a, double b);
 };
 
-inline IntegralEuler::IntegralEuler(double a)
-{
+class IntegralPredicao : public Integral {
+    double intervalo;
+public:
+    IntegralPredicao(double);
+    double integrate(double a, double b);
+};
+
+
+
+inline IntegralEuler::IntegralEuler(double a) {
     intervalo = a;
 }
 
-class IntegralVerlet : public Integral
-{
-    
-};
+inline IntegralBarra::IntegralBarra(double a) {
+    intervalo = a;
+}
 
-class  IntegralRunge : public Integral
-{
-    
-};
-
-
+inline IntegralPredicao::IntegralPredicao(double a) {
+    intervalo = a;
+}
 #endif	/* INTEGRAL_H */
 

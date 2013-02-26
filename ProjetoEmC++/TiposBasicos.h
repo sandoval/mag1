@@ -7,52 +7,87 @@
 
 #ifndef TIPOSBASICOS_H
 #define	TIPOSBASICOS_H
-
 #include <math.h>
+#include "tiposbasicos1.h"
 class Vetor
+{
+    Ponto *A;
+    Ponto *B;
+public:
+    void setValues(Ponto *A, Ponto *B);
+    double getArea();
+};
+
+inline void Vetor::setValues(Ponto *A, Ponto *B)
+{
+    delete this->A;
+    delete this->B;
+    
+    this->A = this->A;
+    this->B = this->B;
+            
+           
+}
+
+inline double getArea()
+{
+    //muito foda
+}
+
+class Barra
+{
+    double a;
+    double b;
+    double h;
+    
+public:
+    void setValues(double a, double b, double h);
+    double areaBarra();
+};
+
+inline void Barra::setValues(double a, double b, double h)
+{
+    this->a = a;
+    this->b = b;
+    this->h = h;
+}
+
+inline double Barra::areaBarra()
+{
+    return (b -a)*h;
+}
+
+class Trapesio
 {   
 public:
-    Ponto A;
-    Ponto B;
+    Ponto *A;
+    Ponto *B;
     
-    double sizeOfVetor();
-    Vetor(Ponto A, Ponto B);
-    void nextVetor(Ponto B);
+    double sizeOfTrapesio();
+    Trapesio(Ponto *A, Ponto *B);
+    void nextTrapesio(Ponto *B);
 };
 
-inline void Vetor::nextVetor(Ponto B)
+inline void Trapesio::nextTrapesio(Ponto *B)
 {
+    delete this->A;
     //detroy o ponto A
-    Vetor.A = Vetor.B;
-    Vetor.B = B;
+    this->A = this->B;
+    this->B = B;
 }
 
-inline Vetor::Vetor(Ponto A, Ponto B)
+inline Trapesio::Trapesio(Ponto *A, Ponto *B)
 {
-    Vetor.A = A;
-    Vetor.B = A;
+    this->A = A;
+    this->B = A;
 }
 
-inline double Vetor::sizeOfVetor()
+inline double Trapesio::sizeOfTrapesio()
 {
-    double lar = B.x - A.x;
-    double alt = B.x - A.x;
-    return sqrt(pow(alt, 2) + pow(lar, 2));
+    double alt = (B->x + A->x) / 2;
+    double lar = B->y - A->y;
+    return alt*lar;
 }
 
-class Ponto
-{
-public:
-    double x;
-    double y;
-    
-    Ponto(double x, double y);
-};
-
-inline Ponto::Ponto(double x, double y)
-{
-    Ponto.x = x;
-    Ponto.y = y;
-}
 #endif	/* TIPOSBASICOS_H */
 

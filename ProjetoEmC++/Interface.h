@@ -16,13 +16,19 @@ using namespace std;
 class Start
 {
 public:
-    void start();
+    void start(); //ok
 private:
-    void tela();
-    void test();
-    void eulerIntegration();
-    void verleetIntegration();
-    void kuttaIntegration();
+    void tela(); //ok
+    void test(); //ok
+    
+    void eulerIntegrationPT(); //falta arquivo
+    void verleetIntegrationPT();
+    void kuttaIntegrationPT();
+    
+    double eulerIntegration(double, double, double); //ok
+    double verleetIntegration(); 
+    double kuttaIntegration();
+    
     void escreveSerial(double);
     double leSerial();
 };

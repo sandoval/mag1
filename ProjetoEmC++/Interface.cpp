@@ -1,30 +1,31 @@
 #include "Interface.h"
 #include "Integral.h"
 
-Start::start()
+void Start::start()
 {
     int option;
     this->tela();
     //peaga otion
+    cin  >> option;
     if(option == 0)
     {
         this->test();
     }
     if(option  == 1)
     {
-        this->eulerIntegration();
+        this->eulerIntegrationPT();
     }
     if(option == 2)
     {
-        this->verleetIntegration();
+        this->verleetIntegrationPT();
     }
     if(option == 3)
     {
-        this->kuttaIntegration();
+        this->kuttaIntegrationPT();
     }
 }
 
-Start::tela()
+void Start::tela()
 {
     cout <<"Escolha a sua opcao" <<endl;
     cout <<"Opcao 0 = Testes" <<endl;
@@ -33,22 +34,60 @@ Start::tela()
     cout <<"Opcao 3 = Integral de Kutta"<<endl;
 }
 
-Start::test()
+void Start::test()
+{
+    double a, b, c, d;
+    int option;
+    cout <<"Escolha a sua opcao" <<endl;
+    cout <<"Opcao 1 = Integral de Euler" <<endl;
+    cout <<"Opcao 2 = Integral de Verllet" <<endl;
+    cout <<"Opcao 3 = Integral de Kutta"<<endl;
+    cin >> option;
+    if(option  == 1)
+    {
+        cout <<"Digite a, b, pulo" <<endl;
+        cin >> a >> b >> c;
+        this->eulerIntegration(a, b, c);
+    }
+    if(option == 2)
+    {
+        this->verleetIntegration();
+    }
+    if(option == 3)
+    {
+        this->kuttaIntegrationPT();
+    }
+}
+
+double Start::eulerIntegration(double a, double b, double intervalo)
+{
+    IntegralEuler inte(intervalo);
+    double inegral = inte.integrate(a, b);
+    cout <<"A integral de " << a << " ate " << b <<"com o intevalo de " <<intervalo <<" e de " << inegral << endl;
+}
+
+double Start::verleetIntegration()
 {
     
 }
 
-Start::eulerIntegration()
+double Start::kuttaIntegration()
 {
+    
+}
+
+void Start::eulerIntegrationPT()
+{
+    
     double intervaloa, intervalob, a , b, valorCorreto, valor, pulo;
-    ofstream entrada ("IntegralEuler.csv", ios::in);;
+    ofstream entrada ("w:IntegralEuler.csv", ios::in);
     
     cout <<"Digite o intervalo de Integraçoa" <<endl;
-    cin << a << b;
+    cin >> a >> b;
     cout <<"Digite o intervalo de Integraçoa" <<endl;
-    cin << intervaloa << intervalob, pulo;
+    cin >> intervaloa >> intervalob >> pulo;
     cout <<"Digite o valor Correto para comparacao" <<endl;
-    cin << valorCorreto;
+    cin >> valorCorreto;
     cout <<"Integral de Euller de" << a << " a " << b <<endl;
     cout <<"O valor esperado e de " << valorCorreto << endl;
     
@@ -56,7 +95,7 @@ Start::eulerIntegration()
     
     //passa pro arduino
     double tempo, precisao;
-    for(double intervalo  = intervaloa; intervalo =< intervalob; intervalo += pulo)
+    for(double intervalo  = intervaloa; intervalo <= intervalob; intervalo += pulo)
     {
         //passa pro arduino
         escreveSerial(0);
@@ -78,24 +117,25 @@ Start::eulerIntegration()
     }
     
     //fecha arquivo
+     
 }
 
-Start::verleetIntegration()
+void Start::verleetIntegrationPT()
 {
     
 }
 
-Start::kuttaIntegration()
+void Start::kuttaIntegrationPT()
 {
     
 }
 
-Start::escreveSerial(double a)
+void Start::escreveSerial(double a)
 {
     
 }
 
-Start::leSerial()
+double Start::leSerial()
 {
     return 0.2;
 }

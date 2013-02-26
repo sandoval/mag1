@@ -15,6 +15,7 @@
       <itemPath>Interface.cpp</itemPath>
       <itemPath>TiposBasicos.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>tiposbasicos1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
