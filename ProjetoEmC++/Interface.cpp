@@ -41,6 +41,7 @@ Start::test()
 Start::eulerIntegration()
 {
     double intervaloa, intervalob, a , b, valorCorreto, valor, pulo;
+    ofstream entrada ("IntegralEuler.csv", ios::in);;
     
     cout <<"Digite o intervalo de Integraçoa" <<endl;
     cin << a << b;
@@ -52,6 +53,7 @@ Start::eulerIntegration()
     cout <<"O valor esperado e de " << valorCorreto << endl;
     
     //abre arquivo
+    
     //passa pro arduino
     double tempo, precisao;
     for(double intervalo  = intervaloa; intervalo =< intervalob; intervalo += pulo)
@@ -72,7 +74,7 @@ Start::eulerIntegration()
         cout << "O valor do Presisao e de :" << precisao << endl;
         
         //escreve no aquivo
-        
+        entrada << intervalo << ";" << valor << ";" << tempo << ";" << precisao << ";" << endl;
     }
     
     //fecha arquivo

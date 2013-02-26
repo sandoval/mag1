@@ -1,4 +1,5 @@
 #include "Integral.h"
+
 IntegralEuler::integrate(double a, double b)
 {
     double x = a+intervalo;
