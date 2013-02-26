@@ -26,7 +26,7 @@ private:
     void kuttaIntegrationPT();
     
     double eulerIntegration(double, double, double); //ok
-    double verleetIntegration(); 
+    double verleetIntegration(double, double, double); 
     double kuttaIntegration();
     
     void escreveSerial(double);

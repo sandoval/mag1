@@ -3,15 +3,15 @@
 double IntegralEuler::integrate(double a, double b)
 {
     double x = a+intervalo;
-    Ponto *A = new Ponto(a, funcao(a));
-    Ponto *B = new Ponto(x, funcao(x));
+    Ponto *A = new Ponto(funcao(a), a);
+    Ponto *B = new Ponto(funcao(x), x);
     double integral = 0;
     Trapesio *vetor = new Trapesio(A, B);
     
     for(x += intervalo; x < b; x += intervalo)
     {
         integral += vetor->sizeOfTrapesio();
-        A = new Ponto(x, funcao(x));
+        A = new Ponto(funcao(x), x);
         vetor->nextTrapesio(A);
     }
     delete A;
@@ -33,9 +33,6 @@ double IntegralBarra::integrate(double a, double b)
     }
     
     //destroir as paradas
-    
-  
-    
     return integral;
 }
 

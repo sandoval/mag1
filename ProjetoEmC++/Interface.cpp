@@ -29,9 +29,9 @@ void Start::tela()
 {
     cout <<"Escolha a sua opcao" <<endl;
     cout <<"Opcao 0 = Testes" <<endl;
-    cout <<"Opcao 1 = Integral de Euler" <<endl;
-    cout <<"Opcao 2 = Integral de Verllet" <<endl;
-    cout <<"Opcao 3 = Integral de Kutta"<<endl;
+    cout <<"Opcao 1 = Integral de Trapezio" <<endl;
+    cout <<"Opcao 2 = Integral de Barra" <<endl;
+    //cout <<"Opcao 3 = Integral de Kutta"<<endl;
 }
 
 void Start::test()
@@ -39,9 +39,9 @@ void Start::test()
     double a, b, c, d;
     int option;
     cout <<"Escolha a sua opcao" <<endl;
-    cout <<"Opcao 1 = Integral de Euler" <<endl;
-    cout <<"Opcao 2 = Integral de Verllet" <<endl;
-    cout <<"Opcao 3 = Integral de Kutta"<<endl;
+    cout <<"Opcao 1 = Integral de Trapezio" <<endl;
+    cout <<"Opcao 2 = Integral de Barra" <<endl;
+    //cout <<"Opcao 3 = Integral de Kutta"<<endl;
     cin >> option;
     if(option  == 1)
     {
@@ -51,7 +51,9 @@ void Start::test()
     }
     if(option == 2)
     {
-        this->verleetIntegration();
+        cout <<"Digite a, b, pulo" <<endl;
+        cin >> a >> b >> c;
+        this->verleetIntegration(a, b ,c);
     }
     if(option == 3)
     {
@@ -63,12 +65,14 @@ double Start::eulerIntegration(double a, double b, double intervalo)
 {
     IntegralEuler inte(intervalo);
     double inegral = inte.integrate(a, b);
-    cout <<"A integral de " << a << " ate " << b <<"com o intevalo de " <<intervalo <<" e de " << inegral << endl;
+    cout <<"A integral de " << a << " ate " << b <<" com o intevalo de " <<intervalo <<" e de " << inegral << endl;
 }
 
-double Start::verleetIntegration()
+double Start::verleetIntegration(double a, double b, double c)
 {
-    
+    IntegralBarra inte(c);
+    double inegral = inte.integrate(a, b);
+   cout <<"A integral de " << a << " ate " << b <<" com o intevalo de " << c <<" e de " << inegral << endl;
 }
 
 double Start::kuttaIntegration()
@@ -78,9 +82,9 @@ double Start::kuttaIntegration()
 
 void Start::eulerIntegrationPT()
 {
-    
+    /*
     double intervaloa, intervalob, a , b, valorCorreto, valor, pulo;
-    ofstream entrada ("w:IntegralEuler.csv", ios::in);
+    ofstream entrada ("IntegralEuler.csv", ios::in);
     
     cout <<"Digite o intervalo de Integraçoa" <<endl;
     cin >> a >> b;
@@ -115,7 +119,7 @@ void Start::eulerIntegrationPT()
         //escreve no aquivo
         entrada << intervalo << ";" << valor << ";" << tempo << ";" << precisao << ";" << endl;
     }
-    
+    */
     //fecha arquivo
      
 }

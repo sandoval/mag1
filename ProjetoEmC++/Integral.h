@@ -18,8 +18,8 @@ public:
 
 inline double Integral::funcao(double x) {
     static int i = 0;
-    return x+pow(x, 3)+2*x -5;
     i++;
+    return pow(x, 3) + 3*x -5;
 };
 
 class IntegralEuler : public Integral {
