@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-s = serial('/dev/tty.usbmodemfd121');
+s = serial('/dev/tty.usbmodemfa131');
 fopen(s);
 
 reads = 800;
