@@ -1,11 +1,3 @@
-
-/*
-  AnalogReadSerial
- Reads an analog input on pin 0, prints the result to the serial monitor 
- 
- This example code is in the public domain.
- */
-
 #define READS 800
 #define WAIT 2
 
