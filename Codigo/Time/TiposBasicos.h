@@ -5,8 +5,8 @@
  * Created on 26 de Fevereiro de 2013, 01:56
  */
 
-#ifndef TIPOSBASICOS1_H
-#define	TIPOSBASICOS1_H
+#ifndef TIPOSBASICOS_H
+#define	TIPOSBASICOS_H
 
 class Ponto
 {

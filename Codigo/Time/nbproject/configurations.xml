@@ -4,8 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>Entidades.h</itemPath>
       <itemPath>Integral.h</itemPath>
       <itemPath>Interface.h</itemPath>
+      <itemPath>Plataformas.h</itemPath>
       <itemPath>TiposBasicos.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
@@ -13,9 +15,9 @@
                    projectFiles="true">
       <itemPath>Integral.cpp</itemPath>
       <itemPath>Interface.cpp</itemPath>
+      <itemPath>Plataformas.cpp</itemPath>
       <itemPath>TiposBasicos.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
-      <itemPath>tiposbasicos1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -32,6 +34,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>Makefile</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

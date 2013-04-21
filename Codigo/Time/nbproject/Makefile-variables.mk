@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=projetoemc__
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/projetoemc__
+CND_ARTIFACT_NAME_Debug=time
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/time
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=projetoemc++.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/projetoemc++.tar
+CND_PACKAGE_NAME_Debug=time.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/time.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=projetoemc__
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/projetoemc__
+CND_ARTIFACT_NAME_Release=time
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/time
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=projetoemc++.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/projetoemc++.tar
+CND_PACKAGE_NAME_Release=time.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/time.tar
 #
 # include compiler specific variables
 #
